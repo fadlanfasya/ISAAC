@@ -1,0 +1,3 @@
+﻿using UnityEngine;using System.Collections;/// <summary>
+/// Script that controls the camera by causing it to follow a target.
+/// </summary>public class FollowCamera : MonoBehaviour{	public Transform targetTransform;	public float lerpSpeed;	void LateUpdate()	{		Vector3 currentPosition = transform.position;		Vector3 targetPosition = targetTransform.position;		currentPosition.y = 0.0f;		targetPosition.y = 0.0f;		// Interpolate x and z positions smoothly to prevent jerkiness on changing direction		Vector3 newPosition = Vector3.Lerp(currentPosition, targetPosition, lerpSpeed);		newPosition.y = transform.position.y;		transform.position = newPosition;	}}
