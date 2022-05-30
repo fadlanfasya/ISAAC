@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: 1cba38658a24d4d4f815de93d0f982e4
-timeCreated: 1432257077
-licenseType: Free
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - patrolPath: {instanceID: 0}
+  - exclamationMark: {instanceID: 0}
+  - droneMoveAudio: {instanceID: 0}
+  - droneAlertAudio: {instanceID: 0}
+  - dronePursuitAudio: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

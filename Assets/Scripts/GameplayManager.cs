@@ -145,7 +145,6 @@ public class GameplayManager : MonoBehaviour
 
 	public void OnLanguageChanged()
 	{
-		UIManager.Instance.OnLanguageChanged();
 		UIManager.Instance.UpdateHUD(score, timeSpent, rank);
 	}
 }

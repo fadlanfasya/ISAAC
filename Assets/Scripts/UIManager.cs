@@ -66,19 +66,17 @@ public class UIManager : MonoBehaviour
 	/// <param name="rank">The player's rank.</param>
 	public void UpdateHUD(int score, float timeSpent, PlayerRank rank)
 	{
-		ShowScore(score);
 		ShowTimer(timeSpent);
-		ShowRank(rank);
 	}
 
 	/// <summary>
 	/// Updates the player score on the HUD
 	/// </summary>
 	/// <param name="score"></param>
-	void ShowScore(int score)
-	{
-		scoreText.text = string.Format(LocalizationManager.Instance.GetString("HUD Score"), score.ToString());
-	}
+	//void ShowScore(int score)
+	//{
+	//	scoreText.text = string.Format(LocalizationManager.Instance.GetString("HUD Score"), score.ToString());
+	//}
 
 	/// <summary>
 	/// Updates the timer on the HUD.
@@ -95,11 +93,11 @@ public class UIManager : MonoBehaviour
 	/// Updates the player rank on the HUD.
 	/// </summary>
 	/// <param name="rank">Player's current rank.</param>
-	void ShowRank(PlayerRank rank)
-	{
-		string rankKey = "Rank " + rank.ToString();
-		rankText.text = string.Format(LocalizationManager.Instance.GetString("HUD Rank"), LocalizationManager.Instance.GetString(rankKey));
-	}
+	//void ShowRank(PlayerRank rank)
+	//{
+	//	string rankKey = "Rank " + rank.ToString();
+	//	rankText.text = string.Format(LocalizationManager.Instance.GetString("HUD Rank"), LocalizationManager.Instance.GetString(rankKey));
+	//}
 
 	/// <summary>
 	/// Call this function to play the button click sound.
@@ -112,15 +110,15 @@ public class UIManager : MonoBehaviour
 	/// <summary>
 	/// Call this function when the language changed.
 	/// </summary>
-	public void OnLanguageChanged()
-	{
-		foreach (GameObject o in screens)
-		{
-			var staticText = o.GetComponent<StaticTextManager>();
-			if (staticText)
-			{
-				staticText.OnLanguageChanged();
-			}
-		}
-	}
+	//public void OnLanguageChanged()
+	//{
+	///	foreach (GameObject o in screens)
+	//	{
+	//		var staticText = o.GetComponent<StaticTextManager>();
+	//		if (staticText)
+	//		{
+	//			staticText.OnLanguageChanged();
+	//		}
+	//	}
+	//}
 }
